@@ -18,7 +18,7 @@ pipeline {
         stage ('deploy to EC2') {
             steps {
                 script {
-                    echo "deploying to shell-script to ec2"
+                    echo "deploying to shell-script"
                     def shellCmd = "bash ./websetup.sh"
                     sshagent (['ec2-jenkins']) {
                         sh "scp -o StrictHostKeyChecking=no websetup.sh ubuntu@${EC2_IP}:/home/ubuntu"
