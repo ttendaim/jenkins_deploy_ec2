@@ -18,7 +18,7 @@ pipeline {
         stage ('deploy to EC2') {
             steps {
                 script {
-                    echo "deploying to shell-script"
+                    echo "deploying to shell-scripts"
                     def shellCmd = "bash ./websetup.sh"
                     sshagent (['18.185.131.125']) {
                         sh "scp -o StrictHostKeyChecking=no websetup.sh ubuntu@${EC2_IP}:/home/ubuntu"
