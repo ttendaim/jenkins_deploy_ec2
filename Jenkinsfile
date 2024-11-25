@@ -6,7 +6,7 @@ pipeline {
     }
 
     stages {
-        stage ('fetch code stage') {
+        stage ('fetch code') {
             steps {
                 script {
                     echo "Pull source code from Github"
